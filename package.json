@@ -2,6 +2,7 @@
   "name": "waynecrypt-nextjs",
   "version": "0.1.0",
   "private": true,
+  "author": "Ali Wains",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
