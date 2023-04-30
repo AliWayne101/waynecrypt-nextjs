@@ -110,7 +110,7 @@ function Navbar() {
             }
           </ul>
           <div className="nav-items-button">
-            <Button text="Get Started" link="/" />
+            
           </div>
         </div>
       </div>

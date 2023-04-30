@@ -2,6 +2,7 @@ import React, { useRef, FormEvent, useState } from 'react'
 import emailjs from '@emailjs/browser';
 import { motion } from 'framer-motion';
 import { HashLoader } from 'react-spinners';
+import Button from '@/components/Button';
 
 function Contact() {
     const fServiceID: string = process.env.NEXT_PUBLIC_EMAIL_SERV!;
@@ -11,6 +12,7 @@ function Contact() {
     const [isSending, setIsSending] = useState(false);
     const [isSent, setIsSent] = useState(false);
     const [isSentError, setIsSentError] = useState(false);
+    const [sayHi, setSayHi] = useState(true);
 
     const _form = useRef<HTMLFormElement>(null);
     const sendEmail = (e: FormEvent<HTMLFormElement>): void => {
@@ -77,22 +79,29 @@ function Contact() {
                             </>
                         )
                     ) : (
-                        <>
-                            <p className="contact-text">
-                                Our inbox is always open. Whether you have a question or just want to say Hi, We&apos;ll try our best to get back to you
-                            </p>
-                            <div className="contact-cta">
-                                <form ref={_form} onSubmit={sendEmail}>
-                                    <label>Name</label>
-                                    <input type="text" name="from_name" required/>
-                                    <label>Email</label>
-                                    <input type="email" name="from_email" required/>
-                                    <label>Message</label>
-                                    <textarea name="message" required/>
-                                    <input type="submit" value="Send" className='btn' />
-                                </form>
+                        sayHi === false ? (
+                            <>
+                                <p className="contact-text">
+                                    Our inbox is always open. Whether you have a question or just want to say Hi, We&apos;ll try our best to get back to you
+                                </p>
+                                <div className="contact-cta">
+                                    <form ref={_form} onSubmit={sendEmail}>
+                                        <label>Name</label>
+                                        <input type="text" name="from_name" required />
+                                        <label>Email</label>
+                                        <input type="email" name="from_email" required />
+                                        <label>Message</label>
+                                        <textarea name="message" required />
+                                        <input type="submit" value="Send" className='btn' />
+                                    </form>
+                                </div>
+                            </>
+                        ) : (
+                            <div className="hero-button">
+                                <span onClick={() => setSayHi(false)}><Button text='Say Hi' link='/#contact' /></span>
                             </div>
-                        </>
+                        )
+
                     )
                 )
             }

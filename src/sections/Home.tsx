@@ -38,7 +38,7 @@ function Home() {
             delay: 1.05
           }}
         >
-            Think, Create, Solve
+            Think, <span className='text-main'>Create</span>, Solve
         </motion.h3>
         <motion.p
           className="hero-text"  
