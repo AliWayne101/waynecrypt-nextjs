@@ -298,4 +298,28 @@
       }
     }
   }
+
+  @media screen and (max-width: 600px) {
+    .project-info {
+      border-top-left-radius: 20px;
+      &-description {
+        margin-top: 10px;
+        margin-bottom: 10px;
+      }
+      &-tech-list {
+        font-size: 12px;
+      }
+      &-links {
+        width: 100%;
+        margin-top: 20px;
+        display: flex;
+        justify-content: right;
+        padding-right: 10px;
+      }
+    }
+  }
+  
+  @media screen and (max-width: 480px) {
+    margin-top: 200px !important;
+  }
 }

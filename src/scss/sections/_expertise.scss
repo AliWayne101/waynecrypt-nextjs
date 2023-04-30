@@ -126,25 +126,26 @@
       }
     }
   }
-  
+
   @media screen and (max-width: 480px) {
+    margin-top: 200px;
     .title {
-        h2 {
-            &::after {
-                display: none;
-            }
+      h2 {
+        &::after {
+          display: none;
         }
+      }
     }
 
     .exp-logo {
-        margin-left: 50px;
-        margin-top: 20px;
+      margin-left: 50px;
+      margin-top: 20px;
     }
 
     .container {
-        .exp-details {
-            grid-template-columns: 1fr;
-        }
+      .exp-details {
+        grid-template-columns: 1fr;
+      }
     }
   }
 }

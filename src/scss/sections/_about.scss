@@ -193,6 +193,7 @@
   }
 
   @media screen and (max-width: 480px) {
+    margin-top: 200px;
     .title {
       h2 {
         &::after {
@@ -202,6 +203,7 @@
     }
     &-grid {
       &-photo {
+        margin-top: 0px;
         .overlay {
           height: 280px;
           width: 223px;
@@ -209,6 +211,11 @@
         &-container {
           height: 280px;
           width: 223px;
+        }
+        &-title {
+          .side-text {
+            margin-top: 12px;
+          }
         }
       }
     }
