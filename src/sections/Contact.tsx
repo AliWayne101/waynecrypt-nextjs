@@ -63,7 +63,9 @@ function Contact() {
         >
             <h2 className="contact-title">What&apos;s next?</h2>
             <h2 className="contact-sub-title">Get in touch</h2>
-
+            <p className="contact-text">
+                Our inbox is always open. Whether you have a question or just want to say Hi, We&apos;ll try our best to get back to you
+            </p>
             {
                 isSending === true ? (
                     <div className="contact-loading">
@@ -90,9 +92,6 @@ function Contact() {
                         sayHi === false ? (
                             saidHi === true ? (
                                 <>
-                                    <p className="contact-text">
-                                        Our inbox is always open. Whether you have a question or just want to say Hi, We&apos;ll try our best to get back to you
-                                    </p>
                                     <div className="contact-cta">
                                         <form ref={_form} onSubmit={sendEmail}>
                                             <label>Name</label>
