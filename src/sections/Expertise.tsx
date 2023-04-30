@@ -1,5 +1,6 @@
 import Image from 'next/image';
 import React, { useEffect, useState } from 'react'
+import { motion } from 'framer-motion';
 
 function Expertise() {
     const [selected, setSelected] = useState(0);
@@ -14,7 +15,7 @@ function Expertise() {
 
     const expertiseLinks = [{
         name: "ReactJS",
-        logo: "/img/reactjs.png",
+        logo: "/img/reactjs.svg",
         desc: "The React. js framework is an open-source JavaScript framework and library developed by Facebook. It's used for building interactive user interfaces and web applications quickly and efficiently with significantly less code than you would with vanilla JavaScript."
     },
     {
@@ -24,7 +25,17 @@ function Expertise() {
     }
     ];
     return (
-        <div className='expertise' id='expertise'>
+        <motion.div 
+            className='expertise' 
+            id='expertise'
+            whileInView="visible"
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+            variants={{
+              visible: { opacity: 1, y: -50 },
+              hidden: { opacity: 0, y: 0}
+            }}
+        >
             <div className="title">
                 <h2>Area of our expertise</h2>
             </div>
@@ -46,14 +57,14 @@ function Expertise() {
                 </ul>
                 <div className="exp-details">
                     <div className="exp-logo">
-                        <Image src={expertiseLinks[selected].logo} alt={expertiseLinks[selected].name} fill />
+                        <Image className='exp-logo-img' src={expertiseLinks[selected].logo} alt={expertiseLinks[selected].name} fill />
                     </div>
                     <div className="exp-description">
                         {expertiseLinks[selected].desc}
                     </div>
                 </div>
             </div>
-        </div>
+        </motion.div>
     )
 }
 

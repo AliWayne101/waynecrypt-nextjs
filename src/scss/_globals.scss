@@ -42,3 +42,39 @@ body, html {
         outline: none;
     }
 }
+
+button {
+    padding: 10px 30px;
+    background-color: var(--background-color);
+    color: var(--light-slate);
+    font-size: var(--tlarge);
+    border-radius: 5px;
+    transition: 300ms ease-in-out;
+    cursor: pointer;
+}
+
+button:hover {
+    padding: 10px 25px 10px 35px;
+    color: var(--theme-color);
+
+}
+
+::-webkit-scrollbar {
+    width: 12px;
+    &-track {
+        background-color: var(--background-color);
+    }
+    &-thumb {
+        background-color: var(--dark-slate);
+        border: 3px solid var(--background-color);
+        border-radius: 10px;
+    }
+}
+
+input.btn {
+    cursor: pointer !important;
+}
+
+.smallText {
+    color: var(--light-slate);
+}
