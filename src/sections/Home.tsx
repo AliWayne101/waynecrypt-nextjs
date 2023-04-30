@@ -50,7 +50,7 @@ function Home() {
             delay: 1.35
           }}
         >
-          We’re a software and services company that builds and transforms businesses using advance technologies, data and AI.
+          Empowering your digital presence with innovative web and software solutions.
         </motion.p>
         <motion.div 
           className="hero-button"
