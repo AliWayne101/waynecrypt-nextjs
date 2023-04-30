@@ -7,33 +7,10 @@ import { motion } from 'framer-motion';
 function Projects() {
     const projData = [
         {
-            projectImage: "/img/projects/axolotl.png",
-            projectName: "Axolotl AI",
-            projectLink: "http://waynecrypt.ml/axolotl",
-            projectDescription: "Axolotl AI is a discord bot which can answer and solve anything you ask in discord",
-            projectTech: [
-                "Node.js",
-                "MongoDB",
-                "Express",
-                "Discord.js",
-                "OpenAI"
-            ],
-            projectExternalLinks: [
-                {
-                    link: "https://github.com/AliWayne101/AxolotlAI",
-                    icon: <FiGithub />
-                },
-                {
-                    link: "",
-                    icon: <FiExternalLink />
-                }
-            ]
-        },
-        {
             projectImage: "/img/projects/dExchange.PNG",
             projectName: "dExchange",
             projectLink: "https://d-exchange-wayne.vercel.app/",
-            projectDescription: "The next generation dollar exchange, for Pakistani users who are facing problems to convert their PayPal USD in PKR. This website allows them to exchange their money conveniently to their bank accounts.",
+            projectDescription: "The next generation dollar exchange, for Pakistani users who are facing problems to convert their PayPal USD in PKR. This website allows them to exchange their money conveniently to their bank accounts. <br /><br /> Current Status: Under Development",
             projectTech: [
                 "Node.js",
                 "MongoDB",
@@ -48,6 +25,29 @@ function Projects() {
                 },
                 {
                     link: "https://d-exchange-wayne.vercel.app/",
+                    icon: <FiExternalLink />
+                }
+            ]
+        },
+        {
+            projectImage: "/img/projects/axolotl.png",
+            projectName: "Axolotl AI",
+            projectLink: "http://waynecrypt.ml/axolotl",
+            projectDescription: "Axolotl AI is a discord bot which can answer and solve anything you ask in discord <br /> <br /> Version: Beta",
+            projectTech: [
+                "Node.js",
+                "MongoDB",
+                "Express",
+                "Discord.js",
+                "OpenAI"
+            ],
+            projectExternalLinks: [
+                {
+                    link: "https://github.com/AliWayne101/AxolotlAI",
+                    icon: <FiGithub />
+                },
+                {
+                    link: "",
                     icon: <FiExternalLink />
                 }
             ]
@@ -90,7 +90,7 @@ function Projects() {
                                     <p className="project-info-overline">Featured Project</p>
                                     <h3 className="project-info-title">{projectName}</h3>
                                     <div className="project-info-description">
-                                        <p>{projectDescription}</p>
+                                        <p dangerouslySetInnerHTML={{__html: projectDescription}}></p>
                                     </div>
                                     <ul className="project-info-tech-list">
                                         {
