@@ -59,12 +59,13 @@
           width: 100%;
           height: 100%;
           background-color: #9d00ff4d;
-          border-top-left-radius: 20px;
+          border-radius: 20px;
         }
         img {
           z-index: 0;
           filter: grayscale(100%);
           transition: 0.3s ease-in-out;
+          border-radius: 20px;
         }
       }
       &-info {
@@ -301,7 +302,7 @@
 
   @media screen and (max-width: 600px) {
     .project-info {
-      border-top-left-radius: 20px;
+      border-radius: 20px;
       &-description {
         margin-top: 10px;
         margin-bottom: 10px;

@@ -18,11 +18,7 @@ function Projects() {
                 "Discord.js",
                 "OpenAI"
             ],
-            projectExternalLinks: {
-                github: "",
-                externalLink: ""
-            },
-            projectExternalLinkss: [
+            projectExternalLinks: [
                 {
                     link: "https://github.com/AliWayne101/AxolotlAI",
                     icon: <FiGithub />
@@ -32,7 +28,30 @@ function Projects() {
                     icon: <FiExternalLink />
                 }
             ]
-        }
+        },
+        {
+            projectImage: "/img/projects/dExchange.PNG",
+            projectName: "dExchange",
+            projectLink: "https://d-exchange-wayne.vercel.app/",
+            projectDescription: "The next generation dollar exchange, for Pakistani users who are facing problems to convert their PayPal USD in PKR. This website allows them to exchange their money conveniently to their bank accounts.",
+            projectTech: [
+                "Node.js",
+                "MongoDB",
+                "Express",
+                "React",
+                "Vite.js"
+            ],
+            projectExternalLinks: [
+                {
+                    link: "https://github.com/AliWayne101/dExchange",
+                    icon: <FiGithub />
+                },
+                {
+                    link: "https://d-exchange-wayne.vercel.app/",
+                    icon: <FiExternalLink />
+                }
+            ]
+        },
     ];
     return (
         <motion.div
@@ -56,7 +75,6 @@ function Projects() {
                         projectDescription,
                         projectLink,
                         projectExternalLinks,
-                        projectExternalLinkss,
                         projectName,
                         projectTech
                     }) => {
@@ -85,7 +103,7 @@ function Projects() {
                                     </ul>
                                     <ul className="project-info-links">
                                         {
-                                            projectExternalLinkss.map(({ link, icon }) => (
+                                            projectExternalLinks.map(({ link, icon }) => (
                                                 link !== "" ? (
                                                     <li className="project-info-links-item" key={link}>
                                                         <a href={link} target="_blank" rel="noopener noreferrer" className="project-info-links-item-link">
