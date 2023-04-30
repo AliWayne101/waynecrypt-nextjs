@@ -3,6 +3,7 @@ import Link from "next/link";
 import React from 'react'
 import { FiGithub, FiExternalLink } from "react-icons/fi";
 import { motion } from 'framer-motion';
+import { RxDiscordLogo } from "react-icons/rx";
 
 function Projects() {
     const projData = [
@@ -21,16 +22,18 @@ function Projects() {
             projectExternalLinks: [
                 {
                     link: "https://github.com/AliWayne101/dExchange",
-                    icon: <FiGithub />
+                    icon: <FiGithub />,
+                    title: "Github"
                 },
                 {
                     link: "https://d-exchange-wayne.vercel.app/",
-                    icon: <FiExternalLink />
+                    icon: <FiExternalLink />,
+                    title: "External Link"
                 }
             ]
         },
         {
-            projectImage: "/img/projects/axolotl.png",
+            projectImage: "/img/projects/axolotl1.png",
             projectName: "Axolotl AI",
             projectLink: "http://waynecrypt.ml/axolotl",
             projectDescription: "Axolotl AI is a discord bot which can answer and solve anything you ask in discord <br /> <br /> Version: Beta",
@@ -44,11 +47,13 @@ function Projects() {
             projectExternalLinks: [
                 {
                     link: "https://github.com/AliWayne101/AxolotlAI",
-                    icon: <FiGithub />
+                    icon: <FiGithub />,
+                    title: "Github"
                 },
                 {
-                    link: "",
-                    icon: <FiExternalLink />
+                    link: "https://discord.com/api/oauth2/authorize?client_id=1088455984487337994&permissions=8&scope=applications.commands%20bot",
+                    icon: <RxDiscordLogo />,
+                    title: "Invite to Discord"
                 }
             ]
         },
@@ -103,10 +108,10 @@ function Projects() {
                                     </ul>
                                     <ul className="project-info-links">
                                         {
-                                            projectExternalLinks.map(({ link, icon }) => (
+                                            projectExternalLinks.map(({ link, icon, title }, index) => (
                                                 link !== "" ? (
-                                                    <li className="project-info-links-item" key={link}>
-                                                        <a href={link} target="_blank" rel="noopener noreferrer" className="project-info-links-item-link">
+                                                    <li className="project-info-links-item" key={index}>
+                                                        <a href={link} target="_blank" title={title} rel="noopener noreferrer" className="project-info-links-item-link">
                                                             {icon}
                                                         </a>
                                                     </li>

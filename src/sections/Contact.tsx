@@ -114,7 +114,7 @@ function Contact() {
                             )
                         ) : (
                             <div className="hero-button">
-                                <span onClick={delayTime}><Button text='Say Hi' link='/#contact' /></span>
+                                <span onClick={delayTime}><Button text='Say Hi!' link='/#contact' /></span>
                             </div>
                         )
 
