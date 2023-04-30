@@ -30,14 +30,14 @@ function Expertise() {
             desc: "Vite is a build tool created by Evan You, the creator of Vue. It allows for faster development thanks to super fast Hot Module Reload (HMR), fast cold start times, and CSS + JSX + TypeScript support out of the box. Although Vite is opinionated, it can be extended via its Plugin API and JavaScript API."
         },
         {
-            name: "NextJS",
-            logo: "/img/nextjs.svg",
-            desc: "Next.js is a React framework that gives you building blocks to create web applications. By framework, we mean Next.js handles the tooling and configuration needed for React, and provides additional structure, features, and optimizations for your application."
+            name: "NodeJS",
+            logo: "/img/nodejs.svg",
+            desc: "Node allows developers to write JavaScript code that runs directly in a computer process itself instead of in a browser. Node can, therefore, be used to write server-side applications with access to the operating system, file system, and everything else required to build fully-functional applications."
         },
         {
-            name: "NextJS",
-            logo: "/img/nextjs.svg",
-            desc: "Next.js is a React framework that gives you building blocks to create web applications. By framework, we mean Next.js handles the tooling and configuration needed for React, and provides additional structure, features, and optimizations for your application."
+            name: "MongoDB",
+            logo: "/img/mongodb.svg",
+            desc: "MongoDB works best with unstructured data, so it's great for Big Data systems, MapReduce applications, news site forums, and social networking applications. Use MongoDB when: You're using cloud computing. MongoDB is ideal for cloud computing."
         },
     ];
     return (

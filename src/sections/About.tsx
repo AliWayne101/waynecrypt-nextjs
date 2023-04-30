@@ -53,6 +53,8 @@ function About() {
             <li className="about-grid-info-list-item">Sass</li>
             <li className="about-grid-info-list-item">TailwindCSS</li>
             <li className="about-grid-info-list-item">Vue.js</li>
+            <li className="about-grid-info-list-item">MongoDB</li>
+            <li className="about-grid-info-list-item">Express</li>
           </ul>
         </div>
         <div className="about-grid-right-container">
