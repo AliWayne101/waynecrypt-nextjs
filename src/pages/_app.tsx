@@ -14,6 +14,7 @@ export default function App({ Component, pageProps }: AppProps) {
 
   useEffect(() => {
     const TrackingID: string = process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID!;
+    console.log(TrackingID);
     initGA(TrackingID);
   }, [])
   
