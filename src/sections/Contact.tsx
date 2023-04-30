@@ -13,6 +13,7 @@ function Contact() {
     const [isSent, setIsSent] = useState(false);
     const [isSentError, setIsSentError] = useState(false);
     const [sayHi, setSayHi] = useState(true);
+    const [saidHi, setSaidHi] = useState(false);
 
     const _form = useRef<HTMLFormElement>(null);
     const sendEmail = (e: FormEvent<HTMLFormElement>): void => {
@@ -39,6 +40,13 @@ function Contact() {
                 );
         } else
             console.log('Throwing error');
+    }
+
+    const delayTime = () => {
+        setSayHi(false);
+        setTimeout(() => {
+            setSaidHi(true);
+        }, 2000);
     }
 
     return (
@@ -80,25 +88,33 @@ function Contact() {
                         )
                     ) : (
                         sayHi === false ? (
-                            <>
-                                <p className="contact-text">
-                                    Our inbox is always open. Whether you have a question or just want to say Hi, We&apos;ll try our best to get back to you
-                                </p>
-                                <div className="contact-cta">
-                                    <form ref={_form} onSubmit={sendEmail}>
-                                        <label>Name</label>
-                                        <input type="text" name="from_name" required />
-                                        <label>Email</label>
-                                        <input type="email" name="from_email" required />
-                                        <label>Message</label>
-                                        <textarea name="message" required />
-                                        <input type="submit" value="Send" className='btn' />
-                                    </form>
-                                </div>
-                            </>
+                            saidHi === true ? (
+                                <>
+                                    <p className="contact-text">
+                                        Our inbox is always open. Whether you have a question or just want to say Hi, We&apos;ll try our best to get back to you
+                                    </p>
+                                    <div className="contact-cta">
+                                        <form ref={_form} onSubmit={sendEmail}>
+                                            <label>Name</label>
+                                            <input type="text" name="from_name" required />
+                                            <label>Email</label>
+                                            <input type="email" name="from_email" required />
+                                            <label>Message</label>
+                                            <textarea name="message" required />
+                                            <input type="submit" value="Send" className='btn' />
+                                        </form>
+                                    </div>
+                                </>
+                            ) : (
+                                <HashLoader
+                                    color='#9d00ff'
+                                    loading
+                                    size={150}
+                                />
+                            )
                         ) : (
                             <div className="hero-button">
-                                <span onClick={() => setSayHi(false)}><Button text='Say Hi' link='/#contact' /></span>
+                                <span onClick={delayTime}><Button text='Say Hi' link='/#contact' /></span>
                             </div>
                         )
 
