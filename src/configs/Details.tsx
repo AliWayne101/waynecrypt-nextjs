@@ -1,6 +1,6 @@
 const webDetails = {
-    webFullName: "Wayne.pk",
-    webName: "Wayne",
+    webFullName: "Wayne Development",
+    webName: "Wayne Development",
     Email: "admin@waynecrypt.ml"
 };
 export default webDetails

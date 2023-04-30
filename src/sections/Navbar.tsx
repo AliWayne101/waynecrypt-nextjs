@@ -19,7 +19,6 @@ function Navbar() {
   useEffect(() => {
     window.addEventListener("scroll", () => {
       window.pageYOffset > 100 ? setNavbarVisible(true) : setNavbarVisible(false);
-      console.log(pageYOffset);
     });
   }, []);
 
@@ -54,7 +53,7 @@ function Navbar() {
   return (
     <nav>
       <div className={`wrapper ${navbarVisible ? "blur-nav" : ""}`}>
-        <motion.div 
+        <motion.div
           className="brand"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
