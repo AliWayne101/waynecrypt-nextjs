@@ -19,6 +19,7 @@ function Navbar() {
   useEffect(() => {
     window.addEventListener("scroll", () => {
       window.pageYOffset > 100 ? setNavbarVisible(true) : setNavbarVisible(false);
+      console.log(pageYOffset);
     });
   }, []);
 

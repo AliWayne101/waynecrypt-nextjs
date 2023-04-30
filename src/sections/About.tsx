@@ -43,9 +43,6 @@ function About() {
             Here are a few technologies We&apos;ve been working with recently:
           </p>
 
-          <p className="about-grid-info-text">
-            Here are a few technologies We've been working with recently:
-          </p>
           <ul className="about-grid-info-list">
             <li className="about-grid-info-list-item">React</li>
             <li className="about-grid-info-list-item">React Native</li>
