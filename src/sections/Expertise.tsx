@@ -53,7 +53,7 @@ function Expertise() {
             }}
         >
             <div className="title">
-                <h2>In the Zone: A Deep Dive into Our Expertise</h2>
+                <h2>A dive into our expertise</h2>
             </div>
             <div className="container">
                 <ul className="exp-slider">
