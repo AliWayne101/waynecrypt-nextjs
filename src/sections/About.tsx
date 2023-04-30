@@ -36,7 +36,11 @@ function About() {
             At our company, we believe in building long-term relationships with our clients. We understand that technology is constantly evolving, and we strive to stay ahead of the curve to ensure that our clients remain competitive in their respective industries.
           </p>
           <p className="about-grid-info-text">
-            We take great pride in our work and are dedicated to providing our clients with the best possible service. If you're looking for a reliable partner to help you with your web application or software development needs, please don't hesitate to get in touch with us. We'd be happy to discuss your project and provide you with a free consultation.
+            We take great pride in our work and are dedicated to providing our clients with the best possible service. If you&apos;re looking for a reliable partner to help you with your web application or software development needs, please don&apos;t hesitate to get in touch with us. We&apos;d be happy to discuss your project and provide you with a free consultation.
+          </p>
+
+          <p className="about-grid-info-text">
+            Here are a few technologies We&apos;ve been working with recently:
           </p>
 
           <p className="about-grid-info-text">
