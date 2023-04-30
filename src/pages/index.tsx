@@ -29,6 +29,9 @@ function Index() {
       <Head>
         <title>{webDetails.webName}</title>
         <link rel="shortcut icon" href="/favicon.svg" color='#9d00ff' />
+        <meta name="description" content="We are a team of dedicated and passionate developers who are committed to delivering top-quality software solutions to businesses of all sizes. Our goal is to help our clients streamline their operations, increase productivity, and drive growth through the power of technology." />
+        <meta name="author" content="Ali A. Wains" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       </Head>
       {
         showContent && (
