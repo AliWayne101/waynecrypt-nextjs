@@ -135,6 +135,32 @@
           border-radius: 0.2rem;
         }
       }
+      &-icons {
+        display: none;
+        margin-top: 20px;
+        font-family: var(--fira-code);
+        padding-left: 100px;
+        &-ul {
+          display: flex;
+          font-size: var(--tx2large);
+          &-li {
+            list-style-type: none;
+            margin-right: 10px;
+            transition: 0.3s ease-in-out;
+            &-link {
+              color: var(--lightest-slate);
+              transition: 0.3s ease-in-out;
+              &:hover {
+                color: var(--theme-color);
+              }
+            }
+
+            &:hover {
+              transform: translateY(-4px);
+            }
+          }
+        }
+      }
     }
   }
 
@@ -178,6 +204,9 @@
         &-container {
           height: 370px;
           width: 300px;
+        }
+        &-icons {
+          display: flex;
         }
       }
       &-info {

@@ -1,6 +1,8 @@
 import React from 'react'
 import Image from 'next/image';
 import { motion } from 'framer-motion';
+import { socialLinks } from '@/configs/Details';
+import Link from 'next/link';
 
 function About() {
   return (
@@ -67,6 +69,19 @@ function About() {
             <div className="about-grid-photo-container">
               <Image src="/aliwains.jpg" alt="Profile" fill />
             </div>
+          </div>
+          <div className="about-grid-photo-icons">
+            <ul className="about-grid-photo-icons-ul">
+              
+            {
+              socialLinks.map(({ name, icon, link }) => (
+                  <li className="about-grid-photo-icons-ul-li">
+                    <Link href={link} target='_blank' className='about-grid-photo-icons-ul-li-link'>{icon}</Link>
+                  </li>
+              ))
+            }
+            
+            </ul>
           </div>
         </div>
 
