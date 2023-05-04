@@ -74,8 +74,8 @@ function About() {
             <ul className="about-grid-photo-icons-ul">
               
             {
-              socialLinks.map(({ name, icon, link }) => (
-                  <li className="about-grid-photo-icons-ul-li">
+              socialLinks.map(({ name, icon, link }, index) => (
+                  <li className="about-grid-photo-icons-ul-li" key={index}>
                     <Link href={link} target='_blank' className='about-grid-photo-icons-ul-li-link'>{icon}</Link>
                   </li>
               ))
