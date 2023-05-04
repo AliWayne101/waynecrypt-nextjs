@@ -8,6 +8,31 @@ import { RxDiscordLogo } from "react-icons/rx";
 function Projects() {
     const projData = [
         {
+            projectImage: "/img/projects/wayneblogs.PNG",
+            projectName: "WayneBlogs",
+            projectLink: "https://wayneblogs.vercel.app/",
+            projectDescription: "The next generation dollar exchange, for Pakistani users who are facing problems to convert their PayPal USD in PKR. This website allows them to exchange their money conveniently to their bank accounts. <br /><br /> Current Status: Under DevelopmentDiscover a world of ideas, insights, and inspiration with our diverse range of expertly crafted content. From the latest trends to timeless classics, our blog has something for everyone. Join the conversation today and let us guide you on your journey of knowledge and discovery.",
+            projectTech: [
+                "Node.js",
+                "MongoDB",
+                "SASS",
+                "React",
+                "NextJS"
+            ],
+            projectExternalLinks: [
+                {
+                    link: "https://github.com/AliWayne101/wayneblogs",
+                    icon: <FiGithub />,
+                    title: "Github"
+                },
+                {
+                    link: "https://wayneblogs.vercel.app/",
+                    icon: <FiExternalLink />,
+                    title: "External Link"
+                }
+            ]
+        },
+        {
             projectImage: "/img/projects/dExchange.PNG",
             projectName: "dExchange",
             projectLink: "https://d-exchange-wayne.vercel.app/",
