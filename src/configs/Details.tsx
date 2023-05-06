@@ -4,7 +4,7 @@ import { RxDiscordLogo } from "react-icons/rx";
 const webDetails = {
     webFullName: "Wayne Development",
     webName: "WayneDev",
-    Email: "admin@waynecrypt.ml"
+    Email: "alimalikwayne@gmail.com"
 };
 export default webDetails
 
