@@ -43,7 +43,7 @@
     input,
     textarea {
       display: block;
-      min-width: 400px;
+      min-width: 430px;
       font-size: var(--tbase);
       background-color: transparent;
     }
@@ -73,6 +73,19 @@
       font-size: var(--tbase);
       font-family: var(--fira-code);
       font-weight: 300;
+    }
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .contact {
+    &-cta {
+      label,
+      input,
+      textarea {
+        min-width: 360px;
+      }
+           
     }
   }
 }
